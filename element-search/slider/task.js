@@ -1,25 +1,25 @@
 const indexSlides = 5;
 let n = 0;
 
-const slider__item = document.getElementsByClassName('slider__item');
-const slider__dot = document.getElementsByClassName('slider__dot');
+const sliderItem = document.getElementsByClassName('slider__item');
+const sliderDot = document.getElementsByClassName('slider__dot');
 
 const prev = document.getElementsByClassName('slider__arrow_prev')[0];
 const next = document.getElementsByClassName('slider__arrow_next')[0];
 
 function setSlide() {
-  slider__item[n].className = 'slider__item slider__item_active';
-  slider__dot[n].className = 'slider__dot slider__dot_active';
+  sliderItem[n].className = 'slider__item slider__item_active';
+  sliderDot[n].className = 'slider__dot slider__dot_active';
 }
 
 function clearSlide() {
-  slider__item[n].className = 'slider__item';
-  slider__dot[n].className = 'slider__dot';
+  sliderItem[n].className = 'slider__item';
+  sliderDot[n].className = 'slider__dot';
 }
 
 for (let i = 0; i < indexSlides; i++) {
-   slider__dot[i].index = i;
-   slider__dot[i].onclick = function() {
+   sliderDot[i].index = i;
+   sliderDot[i].onclick = function() {
     if (n == this.index)
       return;
     clearSlide();

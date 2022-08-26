@@ -1,14 +1,14 @@
-const modal_main = document.getElementById('modal_main');
-const modal_success = document.getElementById('modal_success');
+const modalMain = document.getElementById('modal_main');
+const modalSuccess = document.getElementById('modal_success');
 
-const modal_close = document.getElementsByClassName('modal__close');
-const show_success = document.getElementsByClassName('show-success');
+const modalClose = document.getElementsByClassName('modal__close');
+const showSuccess = document.getElementsByClassName('show-success');
 
-modal_main.className = 'modal modal_active';
+modalMain.className = 'modal modal_active';
 
-for (let i = 0; i < modal_close.length; i++)
-modal_close[i].onclick = () => {
-    modal_close[i].closest('.modal').className = 'modal';
-    if( modal_close[i] === show_success[0])
-    modal_success.className = 'modal modal_active'
+for (let i = 0; i < modalClose.length; i++)
+modalClose[i].onclick = () => {
+    modalClose[i].closest('.modal').className = 'modal';
+    if( modalClose[i] === showSuccess[0])
+    modalSuccess.className = 'modal modal_active'
 }
